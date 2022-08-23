@@ -6,6 +6,14 @@ public class ProductRepository {
 
     public void save(Product item) {
         Product[] tmp = new Product[items.length + 1];
+
+        Product result = findById(items, item.getId());
+        if (result != null) {
+            throw new AlreadyExistsException(
+                    "Element with id:" + item.getId() + " already exists."
+            );
+        }
+
         for (int i = 0; i < items.length; i++) {
             tmp[i] = items[i];
         }

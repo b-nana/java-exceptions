@@ -66,7 +66,7 @@ public class ProductRepositoryTest {
 
         Product item1 = new Product(1, "Не книга", 100);
         Product item2 = new Smartphone(2, "Samsung Galaxy S22", 90_000, "Samsung");
-        Product item3 = new Book(2, "Поющие в терновнике", 600, "Колин Маккалоу");
+        Product item3 = new Book(3, "Поющие в терновнике", 600, "Колин Маккалоу");
 
         ProductRepository repo = new ProductRepository();
         repo.save(item1);
